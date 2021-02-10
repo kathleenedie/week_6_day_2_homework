@@ -17,16 +17,14 @@ Park.prototype.removeDinosaur = function(dinosaur) {
 }
 
 // Park.prototype.topAttraction = function(dinosaurCollection) {
-//     //let attraction = [];
+//     attraction = [];
 
 //     for (dinosaur of this.dinosaurCollection){
 //         if (dinosaur.guestsAttractedPerDay > attraction.guestsAttractedPerDay){
-//             let attraction = dinosaur
-//         } else {
-//             pass;
+//             attraction = dinosaur
 //         }
-//     return attraction;
-//     }   
+//     }  
+    // return attraction
 // };
 
 // Park.prototype.dinosaurBySpecies = function(dinosaurSpecies){
@@ -38,11 +36,33 @@ Park.prototype.removeDinosaur = function(dinosaur) {
 //     return sameSpecies.length;
 // }
 
-Park.prototype.calculateDailyVisitors = function();
+Park.prototype.calculateDailyVisitors = function(){
     let dailyVisitors = 0
-    for (dinosaur in this.dinosaurCollection);
-    dailyvi
-    }
+    for (const dinosaur of this.dinosaurCollection) {
+        dailyVisitors += dinosaur.guestsAttractedPerDay;
+      }
+    
+    return dailyVisitors;
+    };
 
+Park.prototype.calculateAnnualVisitors = function(){
+    let annualVisitors = 0
+    for (const dinosaur of this.dinosaurCollection) {
+        let dailyVisitors = dinosaur.guestsAttractedPerDay;
+        annualVisitors += (dailyVisitors * 300); 
+        }
+    
+    return annualVisitors;
+    };
+
+Park.prototype.calculateAnnualRevenue = function(){
+    let annualRevenue = 0
+    for (const dinosaur of this.dinosaurCollection) {
+        let annualVisitors = this.calculateAnnualVisitors;
+        annualRevenue += (annualVisitors * 2.50); 
+        }
+    
+    return annualRevenue;
+    };
 
   module.exports = Park;
