@@ -17,11 +17,11 @@ Park.prototype.removeDinosaur = function(dinosaur) {
 }
 
 // Park.prototype.topAttraction = function(dinosaurCollection) {
-//     const attraction = [];
+//     //let attraction = [];
 
-//     for (dinosaur in this.dinosaurCollection){
+//     for (dinosaur of this.dinosaurCollection){
 //         if (dinosaur.guestsAttractedPerDay > attraction.guestsAttractedPerDay){
-//             attraction = dinosaur
+//             let attraction = dinosaur
 //         } else {
 //             pass;
 //         }
@@ -29,13 +29,20 @@ Park.prototype.removeDinosaur = function(dinosaur) {
 //     }   
 // };
 
-Park.prototype.dinosaurBySpecies = function(dinosaurSpecies){
-    let sameSpecies = []
-    for (dinosaur in this.dinosaurCollection){
-        if (dinosaur.species === dinosaurSpecies);
-        sameSpecies.push(dinosaur);
-        }
-    return sameSpecies.length;
-}
+// Park.prototype.dinosaurBySpecies = function(dinosaurSpecies){
+//     let sameSpecies = []
+//     for (dinosaur of this.dinosaurCollection){
+//         if (dinosaur.species == dinosaurSpecies);
+//         sameSpecies.push(dinosaur);
+//         }
+//     return sameSpecies.length;
+// }
+
+Park.prototype.calculateDailyVisitors = function();
+    let dailyVisitors = 0
+    for (dinosaur in this.dinosaurCollection);
+    dailyvi
+    }
+
 
   module.exports = Park;
